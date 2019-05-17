@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Sally Resume</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="application-root"></div>
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+        const appRoot = document.querySelector("#application-root")
+
+        function App(props){
+            console.log(props)
+            return(
+                <header>
+                    {props.children[0]}
+                </header>
+                <main>
+                        {props.children[1]}
+                </main>
+                
+            )
+          
+        }
+
+        ReactDOM.render(
+            <App className='my-resume'>
+                    <h1>Sally Resume</h1>
+                    <h2>Work Experience</h2>
+            </App>, appRoot
+        )
+    </script>
+    
+</body>
+</html>
